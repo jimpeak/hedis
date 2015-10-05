@@ -543,6 +543,13 @@ srandmember
     -> m (f (Maybe ByteString))
 srandmember key = sendRequest (["SRANDMEMBER"] ++ [encode key] )
 
+srandmemberN
+    :: (RedisCtx m f)
+    => ByteString -- ^ key
+    -> Integer -- ^ count
+    -> m (f ([ByteString]))
+srandmemberN key cnt = sendRequest (["SRANDMEMBER"] ++ [encode key] ++ [encode cnt] )
+
 zscore
     :: (RedisCtx m f)
     => ByteString -- ^ key
@@ -936,6 +943,3 @@ lpush
     -> [ByteString] -- ^ value
     -> m (f Integer)
 lpush key value = sendRequest (["LPUSH"] ++ [encode key] ++ map encode value )
-
-
-
