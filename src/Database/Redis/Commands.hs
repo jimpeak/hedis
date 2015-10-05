@@ -115,6 +115,7 @@ smembers, -- |Get all the members in a set (<http://redis.io/commands/smembers>)
 smove, -- |Move a member from one set to another (<http://redis.io/commands/smove>).
 spop, -- |Remove and return a random member from a set (<http://redis.io/commands/spop>).
 srandmember, -- |Get a random member from a set (<http://redis.io/commands/srandmember>).
+srandmemberN, -- |Get random members from a set (<http://redis.io/commands/srandmember>).
 srem, -- |Remove one or more members from a set (<http://redis.io/commands/srem>).
 sunion, -- |Add multiple sets (<http://redis.io/commands/sunion>).
 sunionstore, -- |Add multiple sets and store the resulting set in a key (<http://redis.io/commands/sunionstore>).
